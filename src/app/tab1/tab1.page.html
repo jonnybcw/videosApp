@@ -7,20 +7,58 @@
 <ion-content [fullscreen]="true" color="light">
   <ion-searchbar placeholder="Buscar"></ion-searchbar>
   <ion-list>
-    <ion-item lines="full">
-      <ion-thumbnail slot="start">
-        <img src="https://www.themoviedb.org/t/p/w1280/rKq1Vlw0Bqe2EEvdmIkkkgPQAGf.jpg">
-      </ion-thumbnail>
-      <ion-label>
-        <div class="ion-text-wrap">
-          <h1>Viúva Negra (2021)</h1>
-          <p>08/07/2021 (BR) - 2h 13m</p>
-          <p>Ação, Aventura, Thriller, Ficção científica</p>
-        </div>
-      </ion-label>
-      <ion-chip color="success" outline>
-        <ion-label>76%</ion-label>
-      </ion-chip>
-    </ion-item>
+    <ion-item-sliding>
+      <ion-item lines="full">
+        <ion-thumbnail slot="start">
+          <img
+            src="https://www.themoviedb.org/t/p/w1280/rKq1Vlw0Bqe2EEvdmIkkkgPQAGf.jpg"
+          />
+        </ion-thumbnail>
+
+        <ion-label>
+          <div class="ion-text-wrap">
+            <h1>Viúva Negra (2021)</h1>
+            <p>08/07/2021 (BR) - 2h 13m</p>
+            <p>Ação, Aventura, Thriller, Ficção científica</p>
+          </div>
+        </ion-label>
+
+        <ion-chip color="success" outline>
+          <ion-label>78%</ion-label>
+        </ion-chip>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option >
+          <ion-icon slot="icon-only" name="star"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <ion-item lines="full">
+        <ion-thumbnail slot="start">
+          <img
+            src="https://www.themoviedb.org/t/p/w1280/wTS3dS2DJiMFFgqKDz5fxMTri.jpg"
+          />
+        </ion-thumbnail>
+
+        <ion-label>
+          <div class="ion-text-wrap">
+            <h1>O Esquadrão Suicida (2021)</h1>
+            <p>05/08/2021 (BR) - 2h 12m</p>
+            <p>Ação, Aventura, Fantasia</p>
+          </div>
+        </ion-label>
+
+        <ion-chip color="success" outline>
+          <ion-label>82%</ion-label>
+        </ion-chip>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option >
+          <ion-icon slot="icon-only" name="star"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
   </ion-list>
 </ion-content>
