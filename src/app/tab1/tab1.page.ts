@@ -1,7 +1,8 @@
-
+import { IFilme } from './../models/IFilme.model';
+import { DadosService } from './../services/dados.service';
 import { Component } from '@angular/core';
 import { AlertController, ToastController } from '@ionic/angular';
-import { IFilme } from '../models/IFilme.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab1',
@@ -21,7 +22,8 @@ export class Tab1Page {
       cartaz: 'https://www.themoviedb.org/t/p/w1280/rKq1Vlw0Bqe2EEvdmIkkkgPQAGf.jpg',
       generos: [
         'Ação', 'Aventura', 'Thriller', 'Ficção científica'
-      ]
+      ],
+      pagina: '/mortal-kombat'
     },
     {
       nome: 'O Esquadrão Suicida (2021)',
@@ -31,11 +33,22 @@ export class Tab1Page {
       cartaz: 'https://www.themoviedb.org/t/p/w1280/wTS3dS2DJiMFFgqKDz5fxMTri.jpg',
       generos: [
         'Ação', 'Aventura', 'Fantasia'
-      ]
+      ],
+      pagina: '/liga-justica'
     }
   ];
 
-  constructor(public alertController: AlertController, public toastController: ToastController) {}
+  constructor(
+    public alertController: AlertController,
+    public toastController: ToastController,
+    public dadosService: DadosService,
+    public route: Router
+    ) {}
+
+  exibirFilme(filme: IFilme){
+    this.dadosService.guardarDados('filme', filme);
+    this.route.navigateByUrl('/dados-filme');
+  }
 
   async exibirAlertaFavorito() {
     const alert = await this.alertController.create({

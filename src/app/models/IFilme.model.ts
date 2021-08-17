@@ -5,4 +5,5 @@ export interface IFilme {
   classificacao: number;
   cartaz: string;
   generos: string[]; // array de strings
+  pagina?: string;
 }
